@@ -1,0 +1,103 @@
+{
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build": "node ./config/build.js",
+    "build-test": "cross-env BUILD_ENV=test umi build && npm run build -- -e test",
+    "build-uat": "cross-env BUILD_ENV=uat umi build && npm run build -- -e uat",
+    "build-prod": "cross-env BUILD_ENV=prod umi build && npm run build -- -e prod",
+    "server_start": "pm2 start ecosystem.config.js && pm2 updatePM2",
+    "server_reload": "pm2 startOrReload ecosystem.config.js && pm2 updatePM2",
+    "server_stop": "pm2 stop ecosystem.config.js",
+    "start": "umi dev",
+    "dev": "localChart=true umi dev",
+    "build-search-index": "node ./server/server.js && node ./server/localSearchServer.js ",
+    "test": "umi test",
+    "lint:es": "eslint --ext .js src mock tests",
+    "lint:ts": "tslint \"src/**/*.ts\" \"src/**/*.tsx\"",
+    "precommit": "lint-staged"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.2.2",
+    "@xmly/rocket-chart": "1.5.0-beta1",
+    "@xmly/rocket-chart-wordcloud": "^1.0.0",
+    "@xmly/sniffing-sdk": "^1.0.2",
+    "@xmly/xmrep": "^2.2.12",
+    "antd": "^4.0.4",
+    "app-module-path": "^2.2.0",
+    "axios": "^0.19.1",
+    "classnames": "^2.2.6",
+    "dva": "^2.6.0-beta.6",
+    "form-data": "^3.0.0",
+    "formidable": "^1.2.1",
+    "js-beautify": "^1.10.2",
+    "js-yaml": "^3.13.1",
+    "koa": "^2.0.0",
+    "koa-bodyparser": "^3.2.0",
+    "koa-favicon": "^2.0.0",
+    "koa-logger": "^3.2.1",
+    "koa-mount": "^4.0.0",
+    "koa-nunjucks-2": "^3.0.0",
+    "koa-router": "^7.0.1",
+    "koa-session": "^5.8.2",
+    "koa-static": "^5.0.0",
+    "koa-static-cache": "^4.1.1",
+    "lodash": "^4.17.15",
+    "node-sass": "^5.0.0",
+    "react": "^16.8.6",
+    "react-ace": "^7.0.4",
+    "react-dom": "^16.8.6",
+    "react-markdown": "^4.2.2",
+    "react-router-config": "^5.1.1",
+    "react-syntax-highlighter": "^12.2.1",
+    "sass-loader": "^10.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.7.18",
+    "@types/react-dom": "^16.0.11",
+    "@types/react-syntax-highlighter": "^11.0.4",
+    "@types/react-test-renderer": "^16.0.3",
+    "@typescript-eslint/eslint-plugin": "^2.24.0",
+    "@typescript-eslint/parser": "^2.24.0",
+    "@xmly/eslint-config-mermaid-standard": "0.0.3",
+    "babel-eslint": "^9.0.0",
+    "cross-env": "^7.0.2",
+    "eslint": "^5.4.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-config-standard-jsx": "^8.1.0",
+    "eslint-config-standard-react": "^9.2.0",
+    "eslint-config-umi": "^1.4.0",
+    "eslint-plugin-flowtype": "^2.50.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.2.2",
+    "nunjucks": "^3.0.1",
+    "nunjucks-loader": "^3.0.0",
+    "tslint": "^5.12.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "tslint-react": "^3.6.0",
+    "umi": "^2.9.0",
+    "umi-plugin-react": "^1.8.0",
+    "umi-types": "^0.3.0"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "tslint --fix",
+      "git add"
+    ],
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "yxpm": {
+    "output": "dist"
+  }
+}

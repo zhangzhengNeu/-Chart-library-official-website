@@ -1,0 +1,125 @@
+.search-container {
+  position: relative;
+  width: 360px;
+  height: 64px;
+
+  .searchBox {
+    position: relative;
+    float: left;
+    margin-left: 30px;
+    margin-right: 20px;
+    width: 300px;
+    height: 64px;
+    line-height: 64px;
+    background-color: transparent;
+
+    input {
+      outline: none;
+      float: left;
+      width: 260px;
+      height: 40px;
+      border: 1px solid #f0f0f0;
+      border-right: 0;
+      border-bottom: 0;
+      border-top: 0;
+      color: #757575;
+      font-size: 14px;
+      padding-left: 15px;
+      margin-top: 15px;
+      background-color: transparent;
+    }
+
+    .icon-search {
+      display: block;
+      margin-top: 26px;
+    }
+  }
+
+  .dropMenu {
+    position: absolute;
+    top: 65px;
+    left: 30px;
+    width: 380px;
+    height: auto;
+    max-height: 300px;
+    overflow: hidden;
+    background-color: #fff;
+    z-index: 100;
+    display: block;
+    box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08),
+      0 9px 28px 8px rgba(0, 0, 0, 0.05);
+
+    &-top {
+      color: #312f2f;
+      font-size: 14px;
+      margin: 0 10px;
+      height: 50px;
+      background-color: #fff;
+      border: 1px solid #f0f0f0;
+      border-right: 0;
+      border-left: 0;
+      border-top: 0;
+    }
+
+    &-data {
+      display: block;
+      margin-top: 8px;
+      font-size: 12px;
+      height: 40px;
+      margin-bottom: 8px;
+      font-family: Arial;
+
+      &:hover .dropMenu-data-right {
+        background-color: #e8effa;
+      }
+
+      &-path {
+        float: left;
+        padding-top: 0px;
+        padding-right: 10px;
+        text-align: right;
+        width: 80px;
+        height: 40px;
+        line-height: 40px;
+        color: #a6b1be;
+        border: 1px solid #f0f0f0;
+        border-bottom: 0;
+        border-left: 0;
+        border-top: 0;
+      }
+
+      &-right {
+        float: left;
+        height: 40px;
+        color: rgba(0, 0, 0, 0.65);
+        cursor: pointer;
+
+        &-title {
+          font-size: 13px;
+          padding-left: 14px;
+          width: 300px;
+          color: #302c2c;
+          height: 20px;
+          font-weight: 700;
+          line-height: 20px;
+          .input-match-title {
+            color: rgb(90, 197, 240);
+          }
+        }
+
+        &-content {
+          overflow: hidden;
+          padding-left: 14px;
+          line-height: 20px;
+          width: 300px;
+          height: 20px;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          .input-match-content {
+            color: rgb(90, 197, 240);
+          }
+        }
+      }
+    }
+  }
+}

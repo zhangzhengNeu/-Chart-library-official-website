@@ -1,0 +1,145 @@
+@import '../../utils/themes/color.less';
+
+.navbar {
+  position: fixed;
+  left: 0px;
+  top: 68px;
+  width: 256px;
+  height: calc(100vh - 70px);
+  padding: 1px 0 30px;
+  max-height: fit-content;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.8;
+  box-shadow: 1px 1px 28px 0 rgba(24, 144, 255, 0.1);
+  border-left: 1px solid #eee;
+  overflow-y: auto;
+
+  &-item {
+    display: flex;
+    position: relative;
+    padding: 8px 24px 8px 12px;
+    width: 100%;
+
+    a {
+      color: inherit;
+      flex: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .anticon {
+      margin-right: 10px;
+    }
+
+    &-suffix {
+      margin-left: 10px;
+    }
+
+    &:before {
+      content: '';
+      height: 4px;
+      width: 4px;
+      flex: 0 0 auto;
+      margin: auto 7px auto 0;
+      padding-left: 0;
+      border-radius: 50%;
+      background: transparent;
+      background-clip: content-box;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      border-right: 3px solid @primary-color;
+      opacity: 0;
+      transition: transform 0.15s cubic-bezier(0.215, 0.61, 0.355, 1),
+        opacity 0.15s cubic-bezier(0.215, 0.61, 0.355, 1);
+      transform: scaleY(1);
+    }
+
+    &:hover {
+      color: @primary-color;
+
+    }
+
+    &.is-active {
+      color: @primary-color;
+      background: #f9f0ff;
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+
+  &-1:before {
+    display: none;
+  }
+  
+  &-3:before {
+    margin-left: 12px !important ;
+  }
+
+  &-4:before {
+    margin-left: 24px !important ;
+  }
+
+  &-5:before {
+    margin-left: 36px !important ;
+  }
+}
+
+.navbar-layout {
+  padding: 0 20px;
+  flex: 1;
+}
+
+.hash-navbar {
+  &-wrap {
+    .navbar {
+      top: 100px;
+      left: auto;
+      right: 10px;
+      width: 170px;
+      max-height: calc(100vh - 120px);
+      padding: 10px;
+      font-size: 12px;
+      font-weight: 400;
+      color: #8c8c8c;
+      border-left: 1px solid #eee;
+      box-shadow: none;
+
+      &-item {
+        padding: 3px 0;
+
+        &:before {
+          background: currentColor;
+        }
+
+        &:after {
+          display: none;
+        }
+        &.is-active {
+          background: transparent;
+        }
+      }
+    }
+  }
+}
+
+.navbar-wrap {
+  &-right {
+    padding-right: 200px;
+  }
+  &-left {
+    padding-left: 280px;
+
+    .navbar {
+      left: 0;
+      right: auto;
+    }
+  }
+}

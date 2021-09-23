@@ -1,0 +1,29 @@
+{
+    "target": [
+      { "key": "time", "name": "time" },
+      { "key": "gslbtx.ximalaya.com", "name": "gslbtx.ximalaya.com" },
+      { "key": "m.ximalaya.com", "name": "m.ximalaya.com" },
+      { "key": "mermaid.ximalaya.com", "name": "mermaid.ximalaya.com" },
+      { "key": "mobile.tx.ximalaya.com", "name": "mobile.tx.ximalaya.com" },
+      { "key": "mobile.ximalaya.com", "name": "mobile.ximalaya.com" },
+      { "key": "mobwsa.ximalaya.com", "name": "mobwsa.ximalaya.com" },
+      { "key": "xdcs-collector.ximalaya.com", "name": "xdcs-collector.ximalaya.com" }
+    ],
+    "source": [
+      ["2020-04-08 04:00:00",
+      "2020-04-08 05:00:00",
+      "2020-04-08 06:00:00",
+      "2020-04-08 07:00:00",
+      "2020-04-08 08:00:00",
+      "2020-04-08 09:00:00",
+      "2020-04-08 10:00:00", 
+      "2020-04-08 11:00:00"],
+      [124, 546, 530, 509, 626, 540, 787, 590, 808, 324, 266],
+      [637, 662, 549, 689, 483, 697, 281, 481, 682, 310, 848],
+      [450, 210, 108, 88, 240, 69, 125, 210, 65, 98, 146],
+      [318, 306, 315, 315, 333, 341, 345, 285, 244, 248, 198],
+      [113, 102, 168, 193, 110, 79, 175, 194, 132, 135, 243],
+      [250, 222, 245, 251, 344, 268, 188, 224, 185, 248, 158],
+      [34, 37, 48, 45, 42, 52, 29, 23, 22, 19, 21]
+    ]
+  }

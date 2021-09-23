@@ -1,0 +1,39 @@
+//样式变量及函数导出
+@import './color.less';
+@import './markdown.less';
+
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  font-size: 16px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: @body-background;
+  box-sizing: border-box;
+  a {
+    color: @primary-color;
+  }
+  :global {
+    .ant-layout-header {
+      padding: 0;
+      height: 66px;
+      line-height: 63px;
+      width: 100%;
+      top: 0;
+      position: fixed;
+      background-color: @body-background;
+      border-bottom: 1px solid @border-color;
+    }
+    .ant-layout {
+      background: #fff;
+    }
+    .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+      background-color: @nav-highlight-bg;
+    }
+    .ant-menu-item-selected > a,
+    .ant-menu-item-selected > a:hover {
+      color: @text-highlight-color;
+    }
+  }
+}

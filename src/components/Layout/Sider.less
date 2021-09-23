@@ -1,0 +1,40 @@
+@import '~antd/lib/style/themes/default.less';
+
+.sider {
+  box-shadow: fade(@primary-color, 10%) 0 0 28px 0;
+  height: 100%;
+  background-color: @body-background;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+  .ant-layout-sider-children {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  :global {
+    .ant-menu-inline .ant-menu-item {
+      margin: 0;
+      &::after {
+        border-right-color: #873bf4;
+      }
+    }
+    .ant-menu-item-selected {
+      a {
+        color: #873bf4;
+      }
+      background-color: #f9f0ff;
+    }
+    .ant-menu-item-active a:hover {
+      color: #873bf4;
+    }
+  }
+
+  ul {
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}

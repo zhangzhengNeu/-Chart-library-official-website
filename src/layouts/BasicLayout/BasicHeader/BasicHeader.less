@@ -1,0 +1,118 @@
+@import '../../../utils/themes/color.less';
+
+.basic-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  color: #060622;
+  padding: 0 20px;
+  background: #fff;
+
+  &-left {
+    font-size: 22px;
+    cursor: pointer;
+    text-align: left;
+    width: 280px;
+    flex-shrink: 0;
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    color: #060622;
+  }
+
+  &-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    &-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      div.link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        width: 90px;
+        font-size: 15px;
+        color: #060622;
+
+        &.active {
+          height: 64px;
+          border-bottom: 3px solid @primary-color;
+          border-collapse: collapse;
+
+          a {
+            color: @text-highlight-color;
+          }
+        }
+
+        a {
+          color: #697b8c;
+
+          &:hover {
+            color: @text-highlight-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.basic-header.p-home-header {
+  color: #fff;
+  background: #060622;
+  height: 66px;
+
+  .basic-header-left {
+    color: #fff;
+  }
+
+  .basic-header-right {
+    &-links {
+      div.link {
+        color: #fff;
+
+        a {
+          color: #efefef;
+
+          &:hover {
+            color: rgb(195 154 253);
+          }
+        }
+      }
+    }
+  }
+}
+
+.basic-header.scroll {
+  color: #060622;
+  background: #fff;
+  transition: background 1s;
+  -moz-transition: background 1s;
+  /* Firefox 4 */
+  -webkit-transition: background 1s;
+
+  /* Safari and Chrome */
+  .basic-header-left {
+    color: #060622;
+  }
+
+  .basic-header-right {
+    &-links {
+      div.link {
+        color: #060622;
+
+        a {
+          color: #697b8c;
+
+          &:hover {
+            color: @text-highlight-color;
+          }
+        }
+      }
+    }
+  }
+}
